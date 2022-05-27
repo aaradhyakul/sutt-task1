@@ -1,0 +1,989 @@
+/*----- CAPSULE-CONTAINS THE MAIN ELEMENTS OF THE PAGE ------*/
+
+div.capsule {
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 3000px;
+}
+
+/* ---------------CODE-FOR-TOPBAR-STARTS--------------------- */
+
+header {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 130px 270px 4fr;
+    grid-template-rows: auto;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+    color:dimgray;
+    
+}
+
+
+.block1 {
+    box-sizing: border-box;
+    border-right: 1px solid lightgray;
+    font-size: 12px;
+    height: 30px;
+    padding-top: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+.block2 {
+    box-sizing: border-box;
+    border-right: 1px solid lightgray;
+    height: 30px;
+    padding:7px 5px 0 5px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.block3 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    font-size: 12px;
+    padding:2px 0 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.block3 div{
+    gap: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.block1>* {
+    display: inline-block;
+}
+
+.block3>* {
+    display: inline-block;
+}
+.block3 h4{
+    margin-bottom: 3px;
+}
+
+
+
+.pollution {
+    background-color: lightsalmon;
+    border-radius: 4px;
+    color: white;
+    font-size: 13px;
+    padding:2px 8px;
+    margin-bottom: 3px;
+    
+}
+
+
+
+
+.subs {
+
+    background-color: rgb(213, 38, 38);
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 2px 8px;
+    margin-bottom: 2px;
+    
+    
+}
+/* ------------DROPDOWN FOR IN/US EDITION STARTS-------------- */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    height: 30px;
+
+}
+
+.dropcontent {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 60px;
+    margin-top: 10px;
+
+    box-shadow: 0px 0px 4px 1px gray;
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+
+.dropcontent:hover {
+    display: block;
+    
+}
+
+.dropcontent a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding-right:25px;
+    margin:2px 0px;
+    border-radius: 2px;
+    padding-left:5px;
+    
+    
+
+}
+.dropcontent a:hover{
+    background-color: lightgray;
+}
+
+.dropdown:hover .dropcontent {
+
+    display: block;
+}
+
+.divider {
+    height: 0.5px;
+    width: 95%;
+    background-color: lightgray;
+
+}
+
+/* <---------CODE FOR TOPBAR ENDS---------> */
+
+/* ---------CODE FOR TOI HEADING--------- */
+
+.head {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.toi {
+    font-size: 45px;
+
+}
+/* --------CODE FOR TOI HEADING ENDS--------- */
+
+/* -------------CODE FOR STICKY NAVBAR STARTS---------------- */
+
+.sticky {z-index:3;
+    height: 45px;
+    border-top: 1px solid lightgray;
+    border-bottom: 2px solid black;
+    background-color: whitesmoke;
+
+    position: sticky;
+    width: 90vw;
+    top: 0px;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+}
+.sticky >div{
+    display:flex;
+    align-items: center;
+}
+
+.sticky >div >*{display: inline-block;
+    padding: 14px 5px;
+    
+}
+div.plus {
+    display: flex;
+    align-items: center;
+}
+.plus h4{
+    
+    padding:3px 0 0 0;
+    
+}
+.plus div{
+    padding:2px 0 0 0;
+}
+
+
+
+.dropcontent1{position: absolute;
+    display:none;
+    z-index: 1;
+    box-shadow:0 0 2px 1px ;
+    height:413px;
+    width:500px;
+    margin-top:15px;
+    background-color: white;
+    transition:1s;
+    
+}
+
+
+.briefs:hover .dropcontent1{
+    display:block;
+    
+}
+.briefs:hover .dropbtn1{
+    color:gray;
+}
+.dropcontent1:hover{
+    display:block;
+    
+}
+.dropcontent1 i{
+    transform:translate(13px,-11px)
+    
+
+}
+.mainbriefs{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows:90px 264px;
+    margin:0 20px 0 20px;
+    gap:10px;
+   
+    
+    
+    
+}
+.mainbriefs > div{
+    /* border:1px solid black; */
+    border-radius: 4px;
+    /* box-shadow: 0 0 3px 1px; */
+}
+    
+.imgbriefs{
+    background-image: url(https://static.toiimg.com/thumb/msid-91800800,width-145,resizemode-4,imgsize-102060/91800800.jpg);
+    background-size:cover;
+}   
+.textbrief{
+    padding:10px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.4s;
+
+} 
+.textbrief:hover{
+    color:gray;
+
+}
+.textbrief:last-child{
+    border:none;
+}
+
+
+.bottombrief{
+    grid-column: 1/-1;
+    display:block;
+    
+    
+}
+.bottombrief > div{
+    border-bottom: 1px dotted gray;
+    padding:15px;
+    margin:0 8px;
+    font-size: 15px;
+    transition: .4s;
+}
+.bottombrief >div:hover{
+    color:gray;
+}
+
+
+.dropcontent2{position: absolute;
+    display:none;
+    z-index: 1;
+    box-shadow:0 0 2px 1px ;
+    height:413px;
+    width:800px;
+    margin-top:15px;
+    background-color: white;
+    transform: translate(-92px);
+    
+}
+
+
+.video:hover .dropcontent2{
+    display:block;
+}
+.video:hover .dropbtn2{
+    color:gray;
+}
+.dropcontent2:hover{
+    display:block;
+    
+}
+.dropcontent2 i{
+    transform:translate(110px,-11px)
+}
+
+.dropcontent3{position: absolute;
+    display:none;
+    z-index: 1;
+    box-shadow:0 0 2px 1px ;
+    height:413px;
+    width:95%;
+    margin-top:15px;
+    background-color: white;
+    transform: translate(-130px);
+    
+}
+
+
+.city:hover .dropcontent3{
+    display:block;
+}
+.dropcontent3:hover{
+    display:block;
+    
+}
+.city:hover .dropbtn3{
+    color:gray;
+}
+.dropcontent3 i{
+    transform:translate(138px,-11px)
+}
+
+/* --------------CODE FOR STICKY NAVBAR ENDS-------------- */
+
+
+
+
+
+/* ------------CODE FOR NORMAL NAVBAR STARTS-------------- */
+
+.normal{width:90vw;
+    display:flex;
+    border-bottom: 1px solid lightgrey;
+    font-size:12px;
+
+
+}
+.normal div{
+    padding:5px 14px;
+}
+.inthenews{
+    color:red;
+    font-weight: bold;
+
+}
+/* ----------------CODE FOR NORMAL NAVBAR ENDS---------------- */
+
+
+
+
+
+/* -----------------NEWS-SECTION-STARTS ---------------------*/
+
+section.news{margin:20px 0 ;
+    padding-bottom: 20px;
+    width:90vw;
+    display:flex;
+    gap:5px;
+}
+
+
+.left{display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 240px repeat(9,80px);
+    /* gap:10px; */
+    column-gap: 30px;
+    row-gap:20px;
+    flex:45% 1 1;
+    padding-right:20px;
+    border-right:1px dotted lightgray;
+   
+}
+.left> div{
+    gap:3px;
+    border-bottom:1px dotted lightgray;
+    
+    display:flex;
+    padding:15px 0px 15px 0px;
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+div.big{
+    grid-column: 1/-1;
+    overflow: hidden;
+    padding:0 0;
+    border:none;
+    border-radius: 5px;
+    position:relative;
+}
+.innerbig{
+    /* position: relative; */
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url(https://static.toiimg.com/thumb/imgsize-1056982,msid-91806129,width-600,resizemode-4/91806129.jpg);
+    background-size: cover;
+    transition: 0.6s;
+}
+.innerbig:hover{
+    transform: scale(1.2,1.2);
+}
+.textbig{
+    position:absolute;
+    color:white;
+    padding:20px;
+    bottom:10px;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 2px 2px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.mid{display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,170px);
+    flex:15% 1 1;
+    gap:10px;
+    
+    border-right:1px dotted lightgray;
+    padding-right:20px;
+    padding-left:14px;
+}
+
+
+
+.right{display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 310px 320px 500px;
+    gap:10px;
+    padding-left:15px;
+    
+    flex:35% 1 1;
+    
+}
+.right > div{
+    /* border:1px solid black; */
+    border-radius:4px;
+    
+
+}
+
+.right .img1{
+    display: flex;
+    flex-direction: column;
+}
+.adv{
+    font-size: 10px;
+    color:grey;
+}
+.advimg{
+    flex:200px 1 1;
+    background-image: url(https://mobileads.indiatimes.com/Web_Ads/ROADBLOCK/2022/VIACOM_18/25may22/300x250.jpg) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.right .img2{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(253, 238, 238);
+
+}
+/* .right .img2 > div{
+    border:1px solid black;
+    
+} */
+.toiplus , .morestories{
+    flex:0 0 1;
+    display:flex;
+    align-items: center;
+    margin:0 15px;
+    
+    
+    
+}
+.toiplus > div{
+    display: inline-block;
+   
+}
+.toitxt{
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+}
+.morestories{
+    color:red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.yearly{
+    flex:100% 1 1;
+    height:5%;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    justify-self: center;
+
+}
+.rightnews{
+    flex:1;
+   height:74%;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}
+.rightnews > div{
+    
+    flex:auto;
+}
+.news1 ,.news2, .news3{
+ display:flex;
+ justify-content: space-around;
+ height:40px;
+}
+
+
+.righttxt{
+    
+    /* border:1px solid black; */
+    margin:5px;
+    border-radius:4px;
+    width:190px;
+    overflow: hidden;
+    padding:5px 0 10px 10px;
+
+    
+    
+}
+.rightimg{position: relative;
+    width:120px;
+    
+    
+    /* border:1px solid black; */
+    margin-right:10px;
+    margin-bottom: 5px;
+    margin-top:5px;
+    overflow:hidden;
+    border-radius:4px;
+}
+
+.rightscale{
+    position:absolute;
+    transition: 0.5s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100%;
+    width:100%;
+}
+.rightscale:hover{
+    transform: scale(1.2,1.2);
+}
+.news1 .rightscale{
+    background-image: url(https://static.toiimg.com/thumb/imgsize-47562,msid-91817654,width-600,resizemode-4/91817654.jpg);
+    
+    }
+.news2 .rightscale{
+    background-image: url(https://static.toiimg.com/thumb/imgsize-16496,msid-91807115,width-600,resizemode-4/91807115.jpg);
+}    
+.news3 .rightscale{
+    background-image: url(https://static.toiimg.com/thumb/imgsize-15008,msid-91790753,width-600,resizemode-4/91790753.jpg);
+}
+.right .img3{
+    display:block;
+}
+.img3 ul{
+    padding:25px;
+    /* margin:5px; */
+    
+}
+.img3 ul li{
+    height:20px;
+    border-bottom: 1px dotted lightgray;
+    margin-bottom:10px;
+    padding-bottom: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:15px;
+}
+.img3 ul li:hover{
+    color:lightgray;
+}
+
+
+
+/* section.lowerbar{
+    display:flex;
+    width:90vw;
+    padding-bottom:30px;
+    }
+
+
+.trending{
+    font-size: 13px;
+    font-weight: bold;
+    color:dimgray;
+    
+   font-family:Arial, Helvetica, sans-serif;
+    
+    
+}
+
+
+
+.divider2{
+    width:90vw;
+    height:1px;
+    margin-top: 1px;
+    background-color: black;
+} */
+
+.no-border{
+    border: none !important;
+}
+
+
+
+
+ .imgtext{
+    /* border:1px solid black; */
+    flex:55% 1 1;
+    overflow:hidden;
+
+}
+ .imgimg{
+    
+    flex:45% 1 1;
+    background-size: cover;
+    border-radius:3px;
+    margin-left:5px;
+    overflow: hidden;
+}
+
+
+
+.img1 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-839683,msid-91804918,width-150,resizemode-4/91804918.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img2 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-356402,msid-91771375,width-150,resizemode-4/91771375.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img3 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-50022,msid-91796839,width-150,resizemode-4/91796839.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img4 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-678543,msid-91810056,width-150,resizemode-4/91810056.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img5 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-51420,msid-91811281,width-150,resizemode-4/91811281.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img6 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-30902,msid-91768459,width-150,resizemode-4/91768459.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img7 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-54480,msid-91809051,width-150,resizemode-4/91809051.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img8 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-314366,msid-90497546,width-150,resizemode-4/90497546.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img9 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-1836710,msid-91807296,width-150,resizemode-4/91807296.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img10 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-8642,msid-91801067,width-150,resizemode-4/91801067.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img11 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-67018,msid-91812113,width-150,resizemode-4/91812113.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img12 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-356402,msid-91771375,width-150,resizemode-4/91771375.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img13 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-356402,msid-91771375,width-150,resizemode-4/91771375.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img14 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-78672,msid-91807977,width-150,resizemode-4/91807977.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img15 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-59778,msid-91810729,width-150,resizemode-4/91810729.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img16 .scaleimg{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-228834,msid-91781271,width-150,resizemode-4/91781271.jpg);
+    transition:1s;
+    border-radius: 5px;}
+.left >div:hover .scaleimg{
+    transform: scale(1.2,1.2);
+}
+.left > div:hover .imgtext{
+    color:gray;
+    transition: 0.5s;
+}
+
+
+
+
+.mid >div{
+    display:flex;
+    flex-direction: column;
+    
+    
+    
+}
+.midimg{
+    flex:55% 1 1 ;
+    
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 5px;
+     
+
+}
+.midtext{
+    
+
+    flex:45% 1 1 ;
+    
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight:510;
+    
+    
+}
+.mid >div:hover .midscale{
+    transform: scale(1.2,1.2);
+   
+
+}
+.mid > div:hover{
+    color:gray;
+    transition:0.5s;
+}
+
+.img1 .midscale{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-91806589,msid-91806589,width-200,resizemode-4/91806589.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img2 .midscale{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-72894,msid-91759429,width-200,resizemode-4/91759429.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img3 .midscale{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-632629,msid-91643172,width-200,resizemode-4/91643172.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img4 .midscale{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-91806983,msid-91806983,width-200,resizemode-4/91806983.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img5 .midscale{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-91808068,msid-91808068,width-200,resizemode-4/91808068.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+.img6 .midscale{width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url(https://static.toiimg.com/thumb/imgsize-30902,msid-91768459,width-150,resizemode-4/91768459.jpg);
+    transition:1s;
+    border-radius: 5px;
+    
+}
+
+/* -------------------NEWS SECTION ENDS----------------- */
+
+
+/* -----------------LOWER BAR STARTS(INCOMPLETE)-------------- */
+section.lowerbar{
+    display:flex;
+    width:90vw;
+    padding-bottom:30px;
+    }
+
+
+.trending{
+    font-size: 13px;
+    font-weight: bold;
+    color:dimgray;
+    
+   font-family:Arial, Helvetica, sans-serif;
+    
+    
+}
+
+
+
+.divider2{
+    width:90vw;
+    height:1px;
+    margin-top: 1px;
+    background-color: black;
+}
+
+
+/*-------------------- CODE FOR RESPONSIVNES----------------- */
+
+
+@media(max-width:1092px){
+.sticky .education{
+    display:none;
+}
+.news .right{
+    display:none;
+}
+
+
+}
+
+@media(max-width:1020px){
+    .sticky .life{
+        display:none;
+    }
+    header.container{
+        display:none;
+    }
+}
+
+@media(min-width:1465px)
+{
+    header{
+        width: 1350px;
+    }
+    
+    .sticky,.normal,.head,section.lowerbar,section.news{
+        width:1350px;
+    }
+
+}
+@media(max-width:911px){
+    .sticky .webseries{
+        display:none;
+    }
+}
+@media(max-width:829px){
+    .sticky .tv{
+        display:none;
+    }
+}
+
+
+
